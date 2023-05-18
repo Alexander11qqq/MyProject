@@ -5,8 +5,14 @@ public class TestInstallers : MonoInstaller
 {
     public override void InstallBindings()
     {
-        Container.Bind<string>().FromInstance("Hello, Mavrinka");
-        Container.Bind<Greeter>().AsSingle().NonLazy();
+        Container.
+            Bind<string>().
+            FromInstance("Hello, Mavrinka, my friend");
+
+        Container.
+            Bind<Greeter>().
+            AsSingle().
+            NonLazy();
     }
 }
 
